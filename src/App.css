@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+section {
+  height: 100vh;
+  border: 1px solid yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 5rem;
+}
+.sticky__parent {
+  height: 300vh; /* Adjust height based on content */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  border: 2px solid red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.scroll__section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; /* Adjust based on the number of sections */
   display: flex;
   flex-direction: column;
+  will-change: transform;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.scroll__section input {
+  display: none;
+}
+
+.accordion-header {
+  display: block;
+  background-color: #007bff;
   color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-header:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f7f7f7;
+  padding: 0 10px;
+}
+
+.scroll__section input:checked + .accordion-header + .accordion-body {
+  max-height: 500px; /* Adjust as needed */
+  padding: 10px;
+}
+
+.accordion-wrap {
+width: 70%
 }
