@@ -41,7 +41,7 @@ section {
   color: white;
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.9s ease;
 }
 
 .accordion-header:hover {
@@ -51,7 +51,7 @@ section {
 .accordion-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.9s ease;
   background-color: #f7f7f7;
   padding: 0 10px;
 }
